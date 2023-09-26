@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="40dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topContainer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/pink"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.30"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0" />
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:src="@drawable/back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/topContainer"
+            app:layout_constraintHorizontal_bias="0.04"
+            app:layout_constraintStart_toStartOf="@id/topContainer"
+            app:layout_constraintTop_toTopOf="@id/topContainer"
+            app:layout_constraintVertical_bias="0.01"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/creteProfile"
+            android:text="Create Profile"
+            app:layout_constraintWidth_percent="0.5"
+            android:gravity="center"
+            android:lineHeight="24sp"
+            android:textSize="16sp"
+            android:textFontWeight="600"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/topContainer"
+            app:layout_constraintEnd_toEndOf="@id/topContainer"
+            app:layout_constraintTop_toTopOf="@id/backButton"
+            app:layout_constraintBottom_toBottomOf="@id/backButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/addProfileImg"
+            app:layout_constraintStart_toStartOf="@id/topContainer"
+            app:layout_constraintEnd_toEndOf="@id/topContainer"
+            app:layout_constraintTop_toBottomOf="@id/creteProfile"
+            app:layout_constraintBottom_toTopOf="@id/setProfile"
+            android:src="@drawable/add_profile"
+            app:layout_constraintVertical_bias="0.8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/setProfile"
+            android:text="Set profile"
+            app:layout_constraintWidth_percent="0.5"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textFontWeight="600"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/black_mid"
+            app:layout_constraintStart_toStartOf="@id/topContainer"
+            app:layout_constraintEnd_toEndOf="@id/topContainer"
+            app:layout_constraintBottom_toBottomOf="@id/topContainer"
+            android:layout_marginBottom="15dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        
+        
+        <TextView
+            android:id="@+id/fnameTv"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_bold"
+            app:layout_constraintStart_toStartOf="@id/topContainer"
+            app:layout_constraintEnd_toEndOf="@id/topContainer"
+            app:layout_constraintTop_toBottomOf="@id/topContainer"
+            android:layout_marginTop="20dp"
+            app:layout_constraintWidth_percent="0.95"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="First Name"
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/fnameCard"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            android:backgroundTint="@color/pink"
+            app:layout_constraintStart_toStartOf="@id/topContainer"
+            app:layout_constraintEnd_toEndOf="@id/topContainer"
+            app:layout_constraintTop_toBottomOf="@id/fnameTv"
+            android:layout_marginTop="10dp"
+            app:layout_constraintWidth_percent="0.95"/>
+
+        <TextView
+            android:id="@+id/lnameTv"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_bold"
+            app:layout_constraintStart_toStartOf="@id/topContainer"
+            app:layout_constraintEnd_toEndOf="@id/topContainer"
+            app:layout_constraintTop_toBottomOf="@id/fnameCard"
+            android:layout_marginTop="20dp"
+            app:layout_constraintWidth_percent="0.95"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Last Name"
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/lnameCard"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            android:backgroundTint="@color/pink"
+            app:layout_constraintStart_toStartOf="@id/topContainer"
+            app:layout_constraintEnd_toEndOf="@id/topContainer"
+            app:layout_constraintTop_toBottomOf="@id/lnameTv"
+            android:layout_marginTop="10dp"
+            app:layout_constraintWidth_percent="0.95"/>
+
+        <TextView
+            android:id="@+id/phoneTv"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_bold"
+            app:layout_constraintStart_toStartOf="@id/topContainer"
+            app:layout_constraintEnd_toEndOf="@id/topContainer"
+            app:layout_constraintTop_toBottomOf="@id/lnameCard"
+            android:layout_marginTop="20dp"
+            app:layout_constraintWidth_percent="0.95"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Phone"
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/phoneCard"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            android:backgroundTint="@color/pink"
+            app:layout_constraintStart_toStartOf="@id/topContainer"
+            app:layout_constraintEnd_toEndOf="@id/topContainer"
+            app:layout_constraintTop_toBottomOf="@id/phoneTv"
+            android:layout_marginTop="10dp"
+            app:layout_constraintWidth_percent="0.95"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/locationCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            android:backgroundTint="@color/orange"
+            app:layout_constraintStart_toStartOf="@id/topContainer"
+            app:layout_constraintEnd_toEndOf="@id/topContainer"
+            app:layout_constraintTop_toBottomOf="@id/phoneCard"
+            android:layout_marginTop="15dp"
+            app:layout_constraintWidth_percent="0.95">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/locationContainer"
+                android:padding="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/gpsText"
+                    android:text="Pick Your Current Location"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textFontWeight="500"
+                    android:fontFamily="@font/montserrat_medium"
+                    app:layout_constraintStart_toStartOf="@+id/locationContainer"
+                    app:layout_constraintTop_toTopOf="@id/locationContainer"
+                    app:layout_constraintBottom_toBottomOf="@id/locationContainer"
+                    app:layout_constraintEnd_toStartOf="@id/gpsicon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:id="@+id/gpsicon"
+                    android:src="@drawable/gps"
+                    app:layout_constraintEnd_toEndOf="@id/locationContainer"
+                    app:layout_constraintTop_toTopOf="@id/locationContainer"
+                    app:layout_constraintBottom_toBottomOf="@+id/locationContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/orTv"
+            android:text="Or"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black_mid"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/locationCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:id="@+id/postCodeTv"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_bold"
+            app:layout_constraintStart_toStartOf="@id/topContainer"
+            app:layout_constraintEnd_toEndOf="@id/topContainer"
+            app:layout_constraintTop_toBottomOf="@id/orTv"
+            android:layout_marginTop="20dp"
+            app:layout_constraintWidth_percent="0.95"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Post Code"
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/postCodeCardCard"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            android:backgroundTint="@color/pink"
+            app:layout_constraintStart_toStartOf="@id/topContainer"
+            app:layout_constraintEnd_toEndOf="@id/topContainer"
+            app:layout_constraintTop_toBottomOf="@id/postCodeTv"
+            android:layout_marginTop="10dp"
+            app:layout_constraintWidth_percent="0.95"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/otpBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/blue"
+            android:elevation="0dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:padding="20dp"
+            android:text="Submit"
+            android:textFontWeight="600"
+            android:textSize="16sp"
+            app:cornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/postCodeCardCard"
+            app:layout_constraintWidth_percent="0.95" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
+

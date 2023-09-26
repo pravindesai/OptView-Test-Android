@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.otp.OtpFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/pink"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="5dp"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/topContainer"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="@id/topContainer"
+        app:layout_constraintTop_toTopOf="@id/topContainer"
+        app:layout_constraintVertical_bias="0.01"
+        app:tint="@color/black" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/montserrat_bold"
+        app:layout_constraintVertical_bias="0"
+        android:lineHeight="41sp"
+        android:text="Enter your \nVerification code"
+        android:textColor="@color/black"
+        android:textFontWeight="800"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toBottomOf="@+id/topContainer"
+        app:layout_constraintEnd_toEndOf="@id/topContainer"
+        app:layout_constraintStart_toStartOf="@id/backButton"
+        app:layout_constraintTop_toBottomOf="@id/backButton" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="We Have Sent The Code Verification To \nYour Mobile Number"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/title"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <TextView
+        android:id="@+id/phNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="+91 9818452167"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/topContainer"
+        app:layout_constraintStart_toStartOf="@id/topContainer"
+        app:layout_constraintTop_toBottomOf="@id/topContainer" />
+    <ImageView
+        android:id="@+id/edtBtn"
+        android:src="@drawable/editbtn"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/phNumber"
+        app:layout_constraintTop_toTopOf="@id/phNumber"
+        app:layout_constraintBottom_toBottomOf="@id/phNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/otpCard"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+
+        app:layout_constraintWidth_percent="0.95"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/pink"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/topContainer"
+        app:layout_constraintTop_toBottomOf="@id/phNumber">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/numContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phnumTL"
+                android:gravity="center_vertical"
+                android:background="@color/pink"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@color/pink"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="0dp"
+                app:boxBackgroundMode="filled"
+                app:boxBackgroundColor="@color/pink"
+                style="@style/MyHintStyle"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/otpET"
+                    android:inputType="numberDecimal"
+                    android:maxLength="4"
+                    android:text="1234"
+                    android:letterSpacing="3"
+                    android:textAlignment="center"
+                    android:background="@null"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textColor="@color/black_mid"
+                    android:backgroundTint="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submitBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/blue"
+        android:elevation="0dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:padding="20dp"
+        android:text="Submit"
+        android:textFontWeight="600"
+        android:textSize="16sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otpCard"
+        app:layout_constraintWidth_percent="0.95" />
+
+
+    <TextView
+        android:id="@+id/resendTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:lineHeight="24sp"
+        android:text="@string/resend_otp"
+        android:textColor="@color/black"
+        android:textFontWeight="600"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submitBtn"
+        app:layout_constraintVertical_bias="0.65"
+        app:layout_constraintWidth_percent="0.95" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

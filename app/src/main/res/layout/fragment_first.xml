@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.splash.FirstFragment"
+    android:background="@color/pink">
+
+    <ImageView
+        android:id="@+id/bubbles"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/splash_img_png"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/splashgrp"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintWidth_percent="0.40"
+        app:layout_constraintBottom_toBottomOf="@+id/bubbles"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/bubbles"
+        app:layout_constraintTop_toTopOf="@+id/bubbles" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:textColor="@color/black"
+        android:textFontWeight="700"
+        android:textSize="24sp"
+        android:fontFamily="@font/montserrat_bold"
+        app:layout_constraintWidth_percent=".75"
+        android:gravity="center"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Find Nearest Local\n Market"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
